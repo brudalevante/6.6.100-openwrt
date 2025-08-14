@@ -1,37 +1,79 @@
-*.o
+# Ignora archivos y carpetas de compilación
+build_dir/
+bin/
+tmp/
+autobuild_release/
+downloads/
+staging_dir/
+logs/
+feeds/
+dl/
+*.ipk
+*.patch
+
+# Ignora archivos temporales y logs
+*.log
+*.out
+*.bak
+*.swp
+*.swo
+*.tmp
+*.old
+*.core
+
+# Ignora imágenes y binarios grandes
+*.img
+*.bin
+*.gz
+*.tar
+*.zip
+*.7z
+*.xz
+
+# Ignora archivos de configuración de IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignora archivos de sistema
 .DS_Store
-.*.swp
-/env
-/dl
-/.config
-/.config.old
-/.toolchain_build_ver
-/bin
-/build_dir
-/staging_dir
-/tmp
-/logs
-/feeds
-/feeds.conf
-/files
-/target/linux/feeds
-/overlay
-/package/feeds
-/package/openwrt-packages
-/*.patch
-/llvm-bpf*
-key-build*
-private-key.pem
-public-key.pem
-*.orig
-*.rej
-*~
-.#*
-*#
-.emacs.desktop*
-TAGS*~
-git-src
-.project
-.cproject
-.ccache
-.vscode*
+Thumbs.db
+
+# Ignora archivos generados por OpenWrt SDK
+*.o
+*.a
+*.so
+*.d
+
+# Ignora archivos de firmware
+*.elf
+*.hex
+
+# Ignora archivos de claves
+*.key
+*.pem
+
+# Ignora archivos de cobertura y reportes
+*.gcno
+*.gcda
+*.gcov
+
+# Ignora archivos de paquetes de Python
+__pycache__/
+*.pyc
+
+# Ignora archivos de paquetes de Node.js
+node_modules/
+
+# Ignora archivos de paquetes de Rust
+target/
+
+# Ignora archivos de paquetes de Go
+vendor/
+
+# Ignora archivos de paquetes de CMake
+CMakeFiles/
+CMakeCache.txt
+
+# Ignora archivos de workflow temporales
+*.workflow
