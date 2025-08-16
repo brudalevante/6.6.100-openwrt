@@ -331,3 +331,22 @@ define KernelPackage/leds-lp5562/description
 endef
 
 $(eval $(call KernelPackage,leds-lp5562))
+
+
+# ----- AÑADIDO: netdev LED trigger -----
+
+define KernelPackage/ledtrig-netdev
+  SUBMENU:=$(LEDS_MENU)
+  TITLE:=LED netdev trigger support
+  KCONFIG:=CONFIG_LEDS_TRIGGER_NETDEV
+  FILES:=$(LED_TRIGGER_DIR)/ledtrig-netdev.ko
+  AUTOLOAD:=$(call AutoLoad,50,ledtrig-netdev)
+  DEPENDS:=+kmod-leds-gpio
+endef
+
+define KernelPackage/ledtrig-netdev/description
+ This package provides the netdev trigger for LEDs, allowing LEDs to indicate
+ network device activity and link speed, including support for 10/100/1000/2500/5000/10000 Mbps.
+endef
+
+$(eval $(call KernelPackage,ledtrig-netdev))
